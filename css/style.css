@@ -112,9 +112,14 @@ body._lock {
 }
 
 .title {
+  text-align: center;
   font-size: 50px;
   font-weight: 600;
   line-height: 120%;
+}
+
+.title:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media (max-width: 992px) {
@@ -184,7 +189,7 @@ body._lock {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 9999;
 }
 
 .header__container {
@@ -528,6 +533,7 @@ body._lock {
 }
 
 .hero__title {
+  text-align: left;
   font-size: 45px;
   max-width: 700px;
 }
@@ -579,4 +585,210 @@ body._lock {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 25px;
+}
+
+.why-us {
+  padding: 30px 0;
+}
+
+.why-us__container:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.why-us__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .why-us__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.why-us__advangages {
+  max-width: 650px;
+}
+
+@media (max-width: 992px) {
+  .why-us__advangages {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-us__advangages {
+    max-width: none;
+  }
+}
+
+.why-us__img img {
+  max-width: 100%;
+}
+
+.why-us__additional-inform {
+  background-color: #ffd93f;
+  padding: 40px 0px;
+}
+
+.advantages-why-us__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px 40px;
+}
+
+.advantages-why-us__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .advantages-why-us__item {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .advantages-why-us__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.advantages-why-us__wrap-icon {
+  min-width: 70px;
+}
+
+.advantages-why-us__icon img {
+  max-width: 100%;
+}
+
+@media (max-width: 380px) {
+  .advantages-why-us__text-block {
+    text-align: center;
+  }
+}
+
+.advantages-why-us__title {
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.advantages-why-us__title:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.advantages-why-us__text {
+  font-size: 18px;
+}
+
+@media (max-width: 480px) {
+  .advantages-why-us__text {
+    font-size: 16px;
+  }
+}
+
+.additional-inform-why-us {
+  position: relative;
+}
+
+.additional-inform-why-us__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px 30px;
+}
+
+@media (max-width: 992px) {
+  .additional-inform-why-us__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .additional-inform-why-us__row:last-child {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+}
+
+@media (min-width: 993px) {
+  .additional-inform-why-us__body {
+    max-width: 600px;
+  }
+}
+
+.additional-inform-why-us__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 137.5%;
+}
+
+.additional-inform-why-us__title:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  .additional-inform-why-us__title {
+    font-size: 20px;
+  }
+}
+
+.additional-inform-why-us__text {
+  font-size: 18px;
+  line-height: 138.88889%;
+}
+
+@media (max-width: 480px) {
+  .additional-inform-why-us__text {
+    font-size: 16px;
+  }
+}
+
+.additional-inform-why-us__img {
+  margin-right: -15px;
+}
+
+@media (min-width: 1150px) {
+  .additional-inform-why-us__img {
+    position: absolute;
+    width: 524px;
+    height: 395px;
+    top: 10%;
+    right: -2%;
+    left: auto;
+  }
+}
+
+@media (min-width: 993px) {
+  .additional-inform-why-us__img {
+    margin-top: -100px;
+  }
+}
+
+.additional-inform-why-us__img img {
+  max-width: 100%;
 }
