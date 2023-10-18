@@ -370,9 +370,9 @@ body._lock {
   }
 }
 
-@media (max-width: 900px) and (max-width: 900px) {
+@media (max-width: 900px) and (max-width: 380px) {
   .menu__body::before {
-    height: 80px;
+    height: 90px;
   }
 }
 
