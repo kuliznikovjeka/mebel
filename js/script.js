@@ -42,3 +42,26 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 });
 
 // ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ
+
+function initSliders() {
+	if (document.querySelector('.our-works__slider.swiper')) {
+
+		new Swiper('.our-works__slider.swiper', {
+			slidesPerView: 1,
+			loop: true,
+			autoHeight: true,
+
+			// Навигация
+			navigation: {
+				nextEl: '.our-works__arrow.our-works__prev',
+				prevEl: '.our-works__arrow.our-works__next',
+			},
+
+		});
+	}
+
+}
+
+window.addEventListener("load", function (e) {
+	initSliders();
+});
