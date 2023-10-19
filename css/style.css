@@ -211,6 +211,12 @@ body._lock {
   left: 0;
   width: 100%;
   z-index: 9999;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.header._active {
+  background-color: #fff;
 }
 
 .header__container {
@@ -510,18 +516,44 @@ body._lock {
 @media (max-width: 992px) {
   .hero {
     padding: 140px 0 180px 0;
+    background-position: 20% 50%;
+  }
+}
+
+@media (max-width: 870px) {
+  .hero {
+    background-position: 35% 50%;
   }
 }
 
 @media (max-width: 767px) {
   .hero {
     padding: 140px 0 100px 0;
+    background-position: 35% 0%;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
   .hero {
-    background-position: 70% 50%;
+    background: url("../img/hero/bg-1.jpg") 20% 0/cover no-repeat;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-position: 25% top;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero {
+    background-position: 30% top;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    background-position: 35% top;
   }
 }
 
@@ -538,6 +570,7 @@ body._lock {
 @media (max-width: 767px) {
   .hero__title {
     font-size: 40px;
+    max-width: 500px;
   }
 }
 
@@ -565,9 +598,22 @@ body._lock {
   }
 }
 
+@media (max-width: 650px) {
+  .hero__desc {
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 525px) {
   .hero__desc {
     font-size: 16px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__desc {
+    max-width: 320px;
   }
 }
 
@@ -969,7 +1015,7 @@ body._lock {
 
 @media (min-width: 993px) {
   .item-work-process {
-    max-width: 410px;
+    max-width: 480px;
   }
 }
 

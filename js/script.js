@@ -1,4 +1,15 @@
 'use strict';
+// Добавление тени/плашки к Header
+window.onscroll = function addShadowHeader() {
+	const header = document.querySelector('.header');
+
+	if (window.pageYOffset > 60) {
+		header.classList.add('_active');
+	} else {
+		header.classList.remove('_active');
+	}
+}
+
 
 // ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ
 const iconMenu = document.querySelector('.icon-menu');
@@ -21,7 +32,7 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 
 		const scrollTagret = document.getElementById(href);
 
-		const topOffset = document.querySelector('.header').offsetHeight + 15;
+		const topOffset = document.querySelector('.header').offsetHeight + 0;
 		if (window.innerWidth < 480) {
 			topOffset === 100;
 		}

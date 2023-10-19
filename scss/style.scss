@@ -101,6 +101,11 @@ $greyColor: #6c6c6c;
 	left: 0;
 	width: 100%;
 	z-index: 9999;
+	transition: background-color 0.3s ease 0s;
+
+	&._active {
+		background-color: #fff;
+	}
 	// .header__container
 
 	&__container {
@@ -369,12 +374,26 @@ $greyColor: #6c6c6c;
 	}
 	@media (max-width: 992px) {
 		padding: 140px 0 180px 0;
+		background-position: 20% 50%;
+	}
+	@media (max-width: 870px) {
+		background-position: 35% 50%;
 	}
 	@media (max-width: 767px) {
 		padding: 140px 0 100px 0;
+		background-position: 35% 0%;
 	}
-	@media (max-width: 640px) {
-		background-position: 70% 50%;
+	@media (max-width: 650px) {
+		background: url("../img/hero/bg-1.jpg") 20% 0 / cover no-repeat;
+	}
+	@media (max-width: 480px) {
+		background-position: 25% top;
+	}
+	@media (max-width: 440px) {
+		background-position: 30% top;
+	}
+	@media (max-width: 380px) {
+		background-position: 35% top;
 	}
 	// .hero__container
 
@@ -393,6 +412,7 @@ $greyColor: #6c6c6c;
 
 		@media (max-width: 767px) {
 			font-size: 40px;
+			max-width: 500px;
 		}
 		@media (max-width: 525px) {
 			font-size: 32px;
@@ -413,8 +433,15 @@ $greyColor: #6c6c6c;
 				margin-bottom: 20px;
 			}
 		}
+		@media (max-width: 650px) {
+			max-width: 400px;
+		}
 		@media (max-width: 525px) {
 			font-size: 16px;
+			max-width: 350px;
+		}
+		@media (max-width: 480px) {
+			max-width: 320px;
 		}
 	}
 
@@ -801,7 +828,7 @@ $greyColor: #6c6c6c;
 }
 .item-work-process {
 	@media (min-width: 993px) {
-		max-width: 410px;
+		max-width: 480px;
 	}
 	// .item-work-process__row
 
