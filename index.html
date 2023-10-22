@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Перетяжка мягкой мебели в Уфе</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./css/modals.min.css">
 	<link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -443,16 +444,24 @@
 						<h3 class="calculation__title">Давайте определим, сколько будет стоить перетяжка вашей мебели:</h3>
 						<p class="calculation__paragraf">*Это бесплатно и ни к чему вас не обязывает</p>
 						<div class="calculation__form form-calculation">
-							<form class="form-calculation__form">
+							<form class="form-calculation__form form" onsubmit="sendEmailTelegram(event)">
 								<div class="form-calculation__wrap-item">
-									<input placeholder="+7(___)___-__-__" class="form-calculation__input-tel"></input>
+									<input name="name" autocomplete="off" type="text" required placeholder="Ваше имя"
+										class="form-calculation__input-name calculation-input"></input>
 								</div>
 								<div class="form-calculation__wrap-item">
-									<button class="form-calculation__btn btn">Заказать рассчет</button>
+									<input name="phone" autocomplete="off" type="tel" maxlength="15" required
+										placeholder="+7(___)___-__-__"
+										class="form-calculation__input-tel calculation-input"></input>
+								</div>
+								<div class="form-calculation__wrap-item">
+									<button type="submit" class="form-calculation__btn btn" data-path="modal-1">Заказать
+										рассчет</button>
 								</div>
 								<p class="form-calculation__terms-of-use">
 									*Нажимая на кнопку, вы даёте согласие на обработку персональных данных.
 								</p>
+								<p class="form-calculation__send-result"></p>
 							</form>
 						</div>
 					</div>
@@ -496,8 +505,19 @@
 				</div>
 			</section>
 		</main>
+		<div class="calculation__modal modal-calculation">
+			<div class="modal-overlay">
+				<div class="modal" data-target="modal-1">
+					<div class="modal__close"></div>
+					<p class="modal__label">Благодарим за доверие</p>
+					<p class="modal__desc">Наша команда свяжется с вами в ближайшее время!</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="./js/application-telegram.js"></script>
+	<script src="./js/modals.js"></script>
 	<script src="./js/script.min.js"></script>
 </body>
 

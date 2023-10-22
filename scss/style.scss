@@ -904,9 +904,9 @@ $greyColor: #6c6c6c;
 				align-items: center;
 			}
 		}
-		@media (max-width: 600px) {
+		@media (max-width: 700px) {
 			flex-direction: column-reverse;
-			align-items: start;
+			align-items: center;
 		}
 	}
 
@@ -920,7 +920,7 @@ $greyColor: #6c6c6c;
 			position: absolute;
 			width: 381px;
 			height: 576px;
-			top: -70%;
+			top: -35%;
 			left: 0;
 		}
 		img {
@@ -977,23 +977,20 @@ $greyColor: #6c6c6c;
 	// .form-calculation__wrap-item
 
 	&__wrap-item {
-		@media (min-width: 601px) {
+		@media (min-width: 701px) {
 			max-width: 300px;
 		}
-		&:first-child {
+		&:not(:last-child) {
 			margin-bottom: 25px;
 		}
+	}
+
+	&__input-name {
 	}
 
 	// .form-calculation__input-tel
 
 	&__input-tel {
-		width: 100%;
-		padding: 10px 15px;
-		font-size: 28px;
-		&::placeholder {
-			color: $mainColor;
-		}
 	}
 
 	// .form-calculation__btn
@@ -1010,6 +1007,22 @@ $greyColor: #6c6c6c;
 		&:not(:first-child) {
 			margin-top: 10px;
 		}
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__send-result {
+		color: greenyellow;
+		font-size: 16px;
+	}
+}
+.calculation-input {
+	width: 100%;
+	padding: 10px 15px;
+	font-size: 28px;
+	&::placeholder {
+		color: $mainColor;
 	}
 }
 //========================================================================================================================================================
